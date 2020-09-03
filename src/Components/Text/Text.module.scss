@@ -1,0 +1,29 @@
+@import "../../scss/utils/config";
+@import "../../scss/utils/mixin";
+@import "../../scss/utils/fonts";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+small{
+  color: $white;
+}
+
+h1 {
+  @include size(30);
+  font-weight: $font-weight-bold;
+}
+
+h6 {
+  @include size(18);
+  font-weight: $font-weight-light;
+}
+
+
+.uppercase {
+  text-transform: uppercase;
+}
