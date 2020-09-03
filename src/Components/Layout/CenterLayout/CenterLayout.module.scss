@@ -1,0 +1,9 @@
+.center-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-wrapper--column {
+  flex-direction: column;
+}
