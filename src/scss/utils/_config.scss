@@ -1,0 +1,28 @@
+//
+// Paths & Directories
+//
+$asset_dir: "../src/assets/";
+
+
+// Colors
+$black: #000000;
+$dark: #101010;
+$dark-mid: #383635;
+$dark-light: #939393;
+$white: #ffffff;
+$green: #6fc13e;
+$orange: #ff8e00;
+$red: #dc001c;
+
+
+$default-space : 1rem !default;
+
+$border-radius-md: 20px;
+$border-radius-lg: 40px;
+
+$grid-breakpoints: (xs: 0,
+        xsm: 374px,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px) !default;

@@ -1,0 +1,34 @@
+// Converts px based sizes to rem
+// -----------------------------------------------------------------------------
+@mixin size($pxValue, $property: "font-size", $standard-size: 16) {
+  #{$property}: $pxValue/$standard-size + rem;
+}
+
+// Min width media queries
+$fix-mqs : false !default;
+
+// Media query helpers
+// -----------------------------------------------------------------------------
+// Media query min-width based
+@mixin mq($name) {
+  @if $fix-mqs {
+    @if $fix-mqs>=map-get($grid-breakpoints, $name) {
+      @content;
+    }
+  }
+
+  @else {
+    @if not map-has-key($grid-breakpoints, $name) {
+      @warn "Warning: `#{$name}` is not a valid breakpoint name, get your shit together!";
+    }
+
+    @else {
+      @media (min-width: map-get($grid-breakpoints, $name)) {
+        @content;
+      }
+    }
+  }
+}
+
+
+

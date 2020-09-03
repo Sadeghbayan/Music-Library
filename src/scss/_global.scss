@@ -1,0 +1,31 @@
+//general class for padding
+.padding--right{
+  padding-right: $default-space;
+}
+.padding--left{
+  padding-left: $default-space;
+}
+.padding--top{
+  padding-top: $default-space;
+}
+.padding--bottom{
+  padding-bottom: $default-space;
+}
+
+//general class for margin
+.margin--right{
+  margin-right: $default-space;
+}
+.margin--left{
+  margin-left: $default-space;
+}
+.margin--top{
+  margin-top: $default-space;
+}
+.margin--bottom{
+  margin-bottom: $default-space;
+}
+
+.hidden{
+  display: none;
+}
