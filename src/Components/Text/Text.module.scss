@@ -14,12 +14,13 @@ small{
 }
 
 h1 {
-  @include size(30);
+  @include size(35);
   font-weight: $font-weight-bold;
+  margin-bottom: $default-space;
 }
 
 h6 {
-  @include size(18);
+  @include size(15);
   font-weight: $font-weight-light;
 }
 
