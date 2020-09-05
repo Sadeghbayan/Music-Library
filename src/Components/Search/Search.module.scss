@@ -1,0 +1,34 @@
+@import "../../scss/utils/config";
+@import "../../scss/utils/mixin";
+@import "../../scss/utils/fonts";
+
+.search-form {
+  width: 560px;
+  margin: 2rem 0;
+  position: relative;
+
+  input[type='text'] {
+    width: 100%;
+    background: $white;
+    border-radius: $border-radius-lg;
+    height: 40px;
+    border: medium none;
+    padding-left: 1.5rem;
+    @include size(13);
+    font-weight: $font-weight-light;
+    box-sizing: border-box;
+  }
+
+  input[type='submit'] {
+    position: absolute;
+    right: 23px;
+    top: 11px;
+    background-repeat: no-repeat;
+    font-size: 0;
+    background-color: transparent;
+    width: 18px;
+    height: 20px;
+    border: medium none;
+    cursor: pointer;
+  }
+}
