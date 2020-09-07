@@ -1,4 +1,5 @@
 import React, {Fragment,useState, useEffect} from 'react';
+import { Ellipsis } from 'react-spinners-css';
 import Header from "../Header/Header"
 import Filter from "../Filter/Filter"
 import CenterLayout from "../Layout/CenterLayout/CenterLayout";
@@ -7,6 +8,9 @@ import { MainContext } from "../../Context/MainContext"
 import styles from './Main.module.scss'
 
 const { Provider } = MainContext;
+
+// color for loading
+const color = "#939393"
 
 const Main = () => {
 
@@ -50,7 +54,10 @@ const Main = () => {
 						<CenterLayout mode="column">
 							<Filter active={activeStatus} handleClick={handleClick} />
 							<div className={styles['songs-wrapper']}>
-								{loading ? <p>Loading ...</p> :
+								{loading ?
+									<div className={styles['loading']}>
+										<Ellipsis color={color} size={50} />
+									</div> :
 									<Fragment>
 										{songsList.map((item, index) =>
 											<Song key={item.id} info={item} className={index % 2 ? 'even' : 'odd'} />
