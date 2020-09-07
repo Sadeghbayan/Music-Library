@@ -1,0 +1,19 @@
+@import "../../scss/utils/icons";
+@import "../../scss/utils/config";
+
+.heart {
+  @include icon-heart($dark-light);
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-size: 22px;
+  cursor: pointer;
+}
+
+.heartFilled {
+  @include icon-heart-filled($red);
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-size: 22px;
+}
