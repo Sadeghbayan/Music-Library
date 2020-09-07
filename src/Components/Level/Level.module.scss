@@ -1,0 +1,112 @@
+@import "../../scss/utils/config";
+@import "../../scss/utils/mixin";
+
+.level-container {
+  //display: flex;
+  //justify-content: center;
+  //align-items: center;
+  position: relative;
+}
+
+//.breaker {
+//  float: left;
+//  width: 50%;
+//  height: 50%;
+//  //position: relative;
+//  &::before {
+//    position: absolute;
+//    left: 0;
+//    width: 2px;
+//    height: 2px;
+//    content: '';
+//    background: white;
+//  }
+//}
+
+//.level-top-right {
+//  right: 0;
+//  background: $dark-mid;
+//}
+//
+//.level-top-left {
+//  left: 0;
+//  background: $dark-mid;
+//}
+//
+//.level-bottom-left {
+//  bottom: 0;
+//  background: $dark-mid;
+//}
+//
+//.level-bottom-right {
+//  bottom: 0;
+//  background: $dark-mid;
+//}
+
+.level-indicator {
+  position: relative;
+}
+//
+.level-number {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 30px;
+  color: $white;
+  @include size(12)
+}
+
+.level-active {
+  circle {
+    fill: $white;
+    stroke: $white;
+  }
+
+  .level-number {
+    color: $black;
+    z-index: 1;
+  }
+}
+
+.svg {
+  height: 40px;
+  width: 40px;
+}
+circle {
+  stroke-width: 5px;
+  fill: transparent;
+}
+.svg-gray{
+  stroke: $black;
+}
+.svg-red{
+  //stroke: red;
+  //stroke-dasharray: 35.5, 284; /* length of arc, circumference of circle */
+  //stroke-dashoffset: -159.75; /* offset of arc from start point (1/2 arc length + 1/4 circumference) */
+  stroke: $dark-mid;
+  stroke-dasharray: 79.5, 303;
+  stroke-dashoffset: -125.75;
+}
+.svg-orange{
+  stroke: #383635;
+  stroke-dasharray: 150.5, 198;
+  stroke-dashoffset: -214.75;
+}
+.svg-blue{
+  stroke: $dark-mid;
+  stroke-dasharray: 89.5, 284;
+  stroke-dashoffset: -26.75;
+}
+.svg-green{
+  //stroke-dasharray: 150.5, 198;
+  stroke-dashoffset: -214.75;
+}
+
+.svg-blue-next {
+  stroke-dashoffset: -26.75;
+}
+
+.svg-red-last {
+  stroke-dashoffset: -125.75;
+}
