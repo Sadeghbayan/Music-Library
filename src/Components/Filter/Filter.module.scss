@@ -1,0 +1,70 @@
+@import "../../scss/utils/config";
+@import "../../scss/utils/mixin";
+@import "../../scss/utils/fonts";
+@import "../../scss/utils/icons";
+
+.filter {
+  cursor: pointer;
+  margin: $default-space 0;
+
+  .filterText {
+    color: $white;
+    text-transform: uppercase;
+    font-weight: $font-weight-normal;
+    @include size(13);
+    margin-right: $default-space;
+  }
+
+  .filterImage {
+    @include icon-filter($white);
+    width: 32px;
+    height: 32px;
+    display: block;
+    background-repeat: no-repeat;
+    border: 2px solid $white;
+    border-radius: $border-radius-lg;
+    background-position: center center;
+    background-size: 18px;
+    &.filter-image-active {
+      @include icon-filter($black);
+      background-color: $white;
+    }
+  }
+
+  .filter-top-info {
+    display: flex;
+    align-items: center;
+  }
+
+  .filter-levels {
+    display: flex;
+    margin-top: $default-space;
+  }
+
+  .visible {
+    display: flex;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .range {
+    border: 2px solid $white;
+    border-radius: $border-radius-lg;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-right: medium none;
+    height: 32px;
+    padding: 0 $default-space * 2 0 $default-space;
+    @include size(13);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -19px;
+  }
+
+}
+
+
+
