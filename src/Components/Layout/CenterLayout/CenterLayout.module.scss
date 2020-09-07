@@ -1,12 +1,14 @@
 .center-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
   position: relative;
+  display: flex;
+  flex-direction: column;
   flex: 1;
+  width: 960px;
+  z-index: 1;
+  margin: 0 auto;
 }
 
-.center-wrapper--column {
-  flex-direction: column;
+.center-wrapper--center {
+  justify-content: center;
+  align-items: center;
 }

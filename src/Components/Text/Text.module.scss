@@ -7,20 +7,47 @@ h2,
 h3,
 h4,
 h5,
-h6,
+h6{
+  color: $white;
+  font-weight: $font-weight-bold;
+  margin-bottom: $default-space;
+}
+
 p,
-small{
+small {
   color: $white;
 }
 
 h1 {
   @include size(35);
   font-weight: $font-weight-bold;
-  margin-bottom: $default-space;
+}
+
+h2 {
+  @include size(27);
+}
+
+h3 {
+  @include size(24);
+}
+
+h4 {
+  @include size(21);
+  font-weight: $font-weight-normal;
+}
+
+h5 {
+  @include size(16);
+  font-weight: $font-weight-light;
 }
 
 h6 {
-  @include size(15);
+  @include size(14);
+  font-weight: $font-weight-light;
+}
+
+p {
+  @include size(13);
   font-weight: $font-weight-light;
 }
 

@@ -8,7 +8,7 @@ const Header = () => {
 	return (
 		<header className={styles.header}>
 			<HeroImage />
-			<CenterLayout mode="column">
+			<CenterLayout mode="center">
 				<Text headingLevel="h1" textStyle="uppercase"> New Songs Delivered Every Week </Text>
 				<Text headingLevel="h6"> Here are the most recent additions to the Yousician App. Start playing today!</Text>
 				<Search />

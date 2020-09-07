@@ -4,7 +4,7 @@
 
 .search-form {
   width: 560px;
-  margin: 2rem 0;
+  margin: $default-space* 1.5 0 $default-space;
   position: relative;
 
   input[type='text'] {

@@ -1,0 +1,53 @@
+@import "../../scss/utils/icons";
+@import "../../scss/utils/config";
+
+.song {
+  display: flex;
+  background: $dark;
+  padding: $default-space;
+
+  .song-info {
+    display: flex;
+    flex-basis: 50%;
+    .song-image {
+      flex-basis: 18%;
+      img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .song-details {
+      margin-left: $default-space * 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+  }
+
+  .song-action {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .song-level {
+
+    }
+
+    .song-heart {
+      margin-left: $default-space * 2;
+      margin-right: $default-space * .5;
+    }
+  }
+}
+
+.odd {
+  background: $dark;
+}
+
+.even {
+  background: $black;
+}

@@ -6,6 +6,9 @@
 .filter {
   cursor: pointer;
   margin: $default-space 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 
   .filterText {
     color: $white;
@@ -39,6 +42,8 @@
   .filter-levels {
     display: flex;
     margin-top: $default-space;
+    width: 100%;
+    justify-content: space-between;
   }
 
   .visible {

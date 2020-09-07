@@ -7,20 +7,34 @@ const Filter = ({children, active, handleClick}) => {
 	const [selectedFilter, setFilterRange] = useState([]);
 	const filterStatusRef = useRef(false)
 
-
 	const handleStatus = () => {
 		setFilterStatus(!filterStatus)
 	}
 
 	const selectFilter = (level) => {
-		setFilterStatus(selectedFilter.push(level))
+		const index = selectedFilter.indexOf(level);
+		if (index === -1) {
+		// 	// if item doesn't exist push to array
+			setFilterRange(oldArray => [...oldArray, level]);
+		}
+		else {
+		// 	// if item exist remove the item and update the array
+			const updatedArray = selectedFilter.splice(index, 1)
+			setFilterRange(updatedArray);
+		}
 	}
 
 	const displayRangeFilter = () => {
-		const selected = selectedFilter.sort((a,b) => {
-			return a - b
-		});
-		return `${selected[0]} - ${selected[selected.length - 1]} `
+		// first check if the array has more than one item
+		if (selectedFilter.length > 1) {
+			const selected = selectedFilter.sort((a,b) => {
+				return a - b
+			});
+			return `${selected[0]} - ${selected[selected.length - 1]} `
+		} else {
+			// if it has only one element no need for dash (-) anymore
+			return selectedFilter[0]
+		}
 	}
 
 	useEffect(() => {
@@ -36,7 +50,11 @@ const Filter = ({children, active, handleClick}) => {
 					{!filterStatus && selectedFilter.length ? (
 						<span className={styles['range']}> {displayRangeFilter()} </span>
 					) : null}
-					<span className={`${styles.filterImage} ${!filterStatus && selectedFilter.length ? styles['filter-image-active']: ''}`}></span>
+					<span
+						className={`${styles.filterImage} 
+						${!filterStatus && selectedFilter.length ? styles['filter-image-active']: ''}`}
+					>
+					</span>
 				</div>
 				<div className={`${styles['filter-levels']} ${filterStatus ? styles['visible'] : styles['hide']}`}>
 					{[...Array(15).keys()].map(i => (

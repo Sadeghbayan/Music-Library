@@ -2,4 +2,8 @@
 
 .main-wrapper {
   background: $black;
+
+  .songs-wrapper {
+    margin-top: $default-space;
+  }
 }
