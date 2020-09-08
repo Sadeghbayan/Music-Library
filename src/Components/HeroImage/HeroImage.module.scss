@@ -1,6 +1,20 @@
+@import "../../scss/utils/config";
+@import "../../scss/utils/mixin";
+
 .hero-image {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
+  overflow: hidden;
+
+  img{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    @include mq(lg) {
+      max-width: inherit;
+      width: auto;
+    }
+  }
 }

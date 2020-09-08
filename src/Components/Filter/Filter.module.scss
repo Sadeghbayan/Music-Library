@@ -5,10 +5,14 @@
 
 .filter {
   cursor: pointer;
-  margin: $default-space 0;
+  margin: $default-space*0.5 0;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  padding: 0 $default-space*.7;
+  @include mq(lg) {
+    padding: 0;
+  }
 
   .filterText {
     color: $white;
@@ -20,8 +24,8 @@
 
   .filterImage {
     @include icon-filter($white);
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
     display: block;
     background-repeat: no-repeat;
     border: 2px solid $white;
@@ -44,6 +48,14 @@
     margin-top: $default-space;
     width: 100%;
     justify-content: space-between;
+    margin-bottom: $default-space;
+    flex-wrap: wrap;
+    padding:0 $default-space;
+    box-sizing: border-box;
+
+    @include mq(md) {
+      padding: 0;
+    }
   }
 
   .visible {
@@ -60,7 +72,7 @@
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
     border-right: medium none;
-    height: 32px;
+    height: 28px;
     padding: 0 $default-space * 2 0 $default-space;
     @include size(13);
     display: flex;
@@ -68,8 +80,6 @@
     align-items: center;
     margin-right: -19px;
   }
-
 }
-
 
 

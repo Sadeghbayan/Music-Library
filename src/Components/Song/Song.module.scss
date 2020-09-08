@@ -8,9 +8,15 @@
 
   .song-info {
     display: flex;
-    flex-basis: 50%;
+    flex-basis: 80%;
+    @include mq(md){
+      flex-basis: 50%;
+    }
     .song-image {
-      flex-basis: 18%;
+      flex-basis: 38%;
+      @include mq(md){
+        flex-basis: 18%;
+      }
       img {
         max-width: 100%;
         width: 100%;
@@ -19,27 +25,37 @@
     }
 
     .song-details {
-      margin-left: $default-space * 2;
+      margin-left: $default-space;
       display: flex;
       flex-direction: column;
       justify-content: center;
+
+      @include mq(md){
+        margin-left: $default-space * 2;
+      }
     }
 
   }
 
   .song-action {
-    flex-basis: 50%;
+    flex-basis: 20%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-
+    @include mq(md){
+      flex-basis: 50%;
+    }
     .song-level {
 
     }
 
     .song-heart {
-      margin-left: $default-space * 2;
-      margin-right: $default-space * .5;
+      margin-left: $default-space;
+      margin-right: 0;
+      @include mq(md) {
+        margin-left: $default-space * 2;
+        margin-right: $default-space * .5;
+      }
     }
   }
 }

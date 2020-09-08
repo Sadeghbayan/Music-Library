@@ -2,55 +2,34 @@
 @import "../../scss/utils/mixin";
 
 .level-container {
-  //display: flex;
-  //justify-content: center;
-  //align-items: center;
   position: relative;
-  width: 40px;
+  flex-basis: 17%;
+  display: flex;
+  justify-content: center;
+  @include mq(md){
+    flex-basis: inherit;
+    margin-bottom: 0;
+  }
 }
 
-//.breaker {
-//  float: left;
-//  width: 50%;
-//  height: 50%;
-//  //position: relative;
-//  &::before {
-//    position: absolute;
-//    left: 0;
-//    width: 2px;
-//    height: 2px;
-//    content: '';
-//    background: white;
-//  }
-//}
+.level-container-inner {
+  width: 35px;
+  position: relative;
+  height: 35px;
 
-//.level-top-right {
-//  right: 0;
-//  background: $dark-mid;
-//}
-//
-//.level-top-left {
-//  left: 0;
-//  background: $dark-mid;
-//}
-//
-//.level-bottom-left {
-//  bottom: 0;
-//  background: $dark-mid;
-//}
-//
-//.level-bottom-right {
-//  bottom: 0;
-//  background: $dark-mid;
-//}
+  @include mq(md){
+    width: 39px;
+    height: 39px;
+  }
+}
 
 .level-indicator {
   position: relative;
 }
-//
+
 .level-number {
   position: absolute;
-  top: 48%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 30px;
@@ -71,8 +50,12 @@
 }
 
 .svg {
-  height: 40px;
-  width: 40px;
+  height: 35px;
+  width: 35px;
+  @include mq(md){
+    width: 39px;
+    height: 39px;
+  }
 }
 circle {
   stroke-width: 5px;

@@ -19,36 +19,61 @@ small {
 }
 
 h1 {
-  @include size(35);
+  @include size(22);
   font-weight: $font-weight-bold;
+
+  @include mq(md) {
+    @include size(35);
+  }
 }
 
 h2 {
   @include size(27);
+
+  @include mq(md) {
+    @include size(27);
+  }
 }
 
 h3 {
-  @include size(24);
+  @include size(20);
+
+  @include mq(md) {
+    @include size(24);
+  }
 }
 
 h4 {
-  @include size(21);
+  @include size(18);
   font-weight: $font-weight-normal;
+  @include mq(md) {
+    @include size(21);
+  }
 }
 
 h5 {
-  @include size(16);
+  @include size(14);
   font-weight: $font-weight-light;
+  @include mq(md) {
+    @include size(16);
+  }
 }
 
 h6 {
-  @include size(14);
+  @include size(15);
   font-weight: $font-weight-light;
+
+  @include mq(md) {
+    @include size(14);
+  }
 }
 
 p {
-  @include size(13);
+  @include size(12);
   font-weight: $font-weight-light;
+  @include mq(md) {
+    @include size(13);
+  }
 }
 
 

@@ -48,46 +48,47 @@ const Level = ({
 	}, [])
 
 	return (
-		<div className={`${styles['level-container']} ${activeStatus ? styles['level-active'] : ''}` } onClick={handleClickFromOutside}>
-			<div className={styles['level-number']}>
-				{levelNumber}
-			</div>
-			<div className={styles['level-indicator']}>
-				<svg viewBox='0 0 100 100' className={styles['svg']}>
-					<circle className={styles['svg-gray']} cx='50' cy='50' r='45' id='gray'/>
-					<circle className={styles['svg-red']} cx='50' cy='50' r='45' id='red'/>
-					<circle className={styles['svg-blue']} cx='50' cy='50' r='45' id='blue'/>
-					<circle className={styles['svg-orange']} cx='50' cy='50' r='45' id='orange'/>
-					{/*1-4*/}
-					<circle className={styles['svg-green']}
-							cx='50' cy='50'
-							r='45'
-							id='green'
-							stroke={pattern[0] ? pattern[0].color : null}
-							stroke-dasharray={pattern[0] ? pattern[0].strokeArray : null}
-					/>
-					{pattern[0] && pattern[0].id > 5 ? (
-						<circle className={styles['svg-blue-next']}
+		<div className={`level-container--outside ${styles['level-container']} ${activeStatus ? styles['level-active'] : ''}` } onClick={handleClickFromOutside}>
+			<div className={styles['level-container-inner']}>
+				<div className={styles['level-number']}>
+					{levelNumber}
+				</div>
+				<div className={styles['level-indicator']}>
+					<svg viewBox='0 0 100 100' className={styles['svg']}>
+						<circle className={styles['svg-gray']} cx='50' cy='50' r='45' id='gray'/>
+						<circle className={styles['svg-red']} cx='50' cy='50' r='45' id='red'/>
+						<circle className={styles['svg-blue']} cx='50' cy='50' r='45' id='blue'/>
+						<circle className={styles['svg-orange']} cx='50' cy='50' r='45' id='orange'/>
+						{/*1-4*/}
+						<circle className={styles['svg-green']}
 								cx='50' cy='50'
 								r='45'
-								id='orange'
+								id='green'
 								stroke={pattern[0] ? pattern[0].color : null}
-								stroke-dasharray={pattern[0] && pattern[0].id > 5 ? pattern[0].strokeArrayNextCircle : null}
+								strokeDasharray={pattern[0] ? pattern[0].strokeArray : null}
 						/>
-					) : null}
-					{pattern[0] && pattern[0].id > 10 ? (
-						<circle className={styles['svg-red-last']}
-								cx='50' cy='50'
-								r='45'
-								id='orange'
-								stroke={pattern[0] ? pattern[0].color : null}
-								stroke-dasharray={pattern[0] && pattern[0].id > 5 ? pattern[0].strokeArrayLastCircle : null}
-						/>
-					) : null}
+						{pattern[0] && pattern[0].id > 5 ? (
+							<circle className={styles['svg-blue-next']}
+									cx='50' cy='50'
+									r='45'
+									id='orange'
+									stroke={pattern[0] ? pattern[0].color : null}
+									strokeDasharray={pattern[0] && pattern[0].id > 5 ? pattern[0].strokeArrayNextCircle : null}
+							/>
+						) : null}
+						{pattern[0] && pattern[0].id > 10 ? (
+							<circle className={styles['svg-red-last']}
+									cx='50' cy='50'
+									r='45'
+									id='orange'
+									stroke={pattern[0] ? pattern[0].color : null}
+									strokeDasharray={pattern[0] && pattern[0].id > 5 ? pattern[0].strokeArrayLastCircle : null}
+							/>
+						) : null}
 
-				</svg>
+					</svg>
+				</div>
 			</div>
-
 		</div>
 	)
 }

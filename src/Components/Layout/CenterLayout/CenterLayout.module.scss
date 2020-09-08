@@ -1,14 +1,25 @@
+@import "../../../scss/utils/config";
+@import "../../../scss/utils/mixin";
+
 .center-wrapper {
   position: relative;
   display: flex;
   flex-direction: column;
   flex: 1;
-  width: 960px;
   z-index: 1;
   margin: 0 auto;
+  padding: 0 $default-space;
+  @include mq(lg) {
+    width: 960px;
+  }
 }
 
-.center-wrapper--center {
+.center {
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+.no-padding {
+  padding: 0;
 }

@@ -2,9 +2,10 @@
 
 .main-wrapper {
   background: $black;
-
+  margin-bottom: $default-space;
   .songs-wrapper {
-    margin-top: $default-space;
+    display: flex;
+    flex-direction: column;
   }
 }
 

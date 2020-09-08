@@ -11,7 +11,9 @@
 .padding--bottom{
   padding-bottom: $default-space;
 }
-
+.no-padding {
+  padding: 0;
+}
 //general class for margin
 .margin--right{
   margin-right: $default-space;
@@ -28,4 +30,10 @@
 
 .hidden{
   display: none;
+}
+
+.filter--outside {
+  .level-container--outside {
+    margin-bottom: $default-space;
+  }
 }

@@ -3,9 +3,12 @@
 @import "../../scss/utils/fonts";
 
 .search-form {
-  width: 560px;
   margin: $default-space* 1.5 0 $default-space;
   position: relative;
+  width: 100%;
+  @include mq(md) {
+    width: 560px;
+  }
 
   input[type='text'] {
     width: 100%;

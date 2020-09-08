@@ -1,12 +1,26 @@
 import React, {Fragment, useState, useContext} from 'react';
 import SearchIcon from '../../assets/icons/search.svg'
 import styles from './Search.module.scss'
+import {MainContext} from "../../Context/MainContext";
 
 const Search = () => {
 	const [search, setInput] = useState("");
+
+	const {
+		setEnding,
+		setStart,
+		setSearchQuery,
+		updateSongsList
+	} = useContext(MainContext)
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		console.log(search)
+		updateSongsList([])
+		setEnding(10)
+		setStart(0)
+		//add `level=` before each item
+		const newLineOflevels = "search_like="+search
+		setSearchQuery(newLineOflevels)
 	}
 
 	return (
