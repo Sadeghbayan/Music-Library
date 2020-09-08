@@ -15,7 +15,6 @@ const Filter = () => {
 		setStart,
 		setFilter,
 		setVisibilityFilter,
-		setLoading
 	} = useContext(MainContext)
 
 	const handleStatus = () => {
@@ -50,20 +49,20 @@ const Filter = () => {
 		}
 	}
 
-	//fetch data based on level
-
-	const fetchDataBasedOnLevel = async () => {
-		if (selectedFilter.length > 0) {
-			updateSongsList([])
-			setEnding(10)
-			setStart(0)
-			//add `level=` before each item
-			const newLineOflevels = selectedFilter.map(item => 'level=' + item).join('&')
-			setFilter(newLineOflevels)
-		}
-	}
-
 	useEffect(() => {
+		//fetch data based on level
+
+		const fetchDataBasedOnLevel = async () => {
+			if (selectedFilter.length > 0) {
+				updateSongsList([])
+				setEnding(10)
+				setStart(0)
+				//add `level=` before each item
+				const newLineOflevels = selectedFilter.map(item => 'level=' + item).join('&')
+				setFilter(newLineOflevels)
+			}
+		}
+
 		if (didMountRef.current) {
 			fetchDataBasedOnLevel();
 		} else {

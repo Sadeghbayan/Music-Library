@@ -35,15 +35,14 @@ const Level = ({
 		setActiveStatus(!activeStatus)
 	}
 
-	const setLevelPattern = () => {
-		const patternIsFind = levelPattern.filter(item => {
-				return item.id === levelNumber
-		})
-		setPattern(patternIsFind)
-	}
-
-
 	useEffect(() => {
+		const setLevelPattern = () => {
+			const patternIsFind = levelPattern.filter(item => {
+				return item.id === levelNumber
+			})
+			setPattern(patternIsFind)
+		}
+
 		setLevelPattern();
 	}, [])
 
@@ -55,15 +54,14 @@ const Level = ({
 				</div>
 				<div className={styles['level-indicator']}>
 					<svg viewBox='0 0 100 100' className={styles['svg']}>
-						<circle className={styles['svg-gray']} cx='50' cy='50' r='45' id='gray'/>
-						<circle className={styles['svg-red']} cx='50' cy='50' r='45' id='red'/>
-						<circle className={styles['svg-blue']} cx='50' cy='50' r='45' id='blue'/>
-						<circle className={styles['svg-orange']} cx='50' cy='50' r='45' id='orange'/>
+						<circle className={styles['svg-gray']} cx='50' cy='50' r='45'/>
+						<circle className={styles['svg-red']} cx='50' cy='50' r='45'/>
+						<circle className={styles['svg-blue']} cx='50' cy='50' r='45'/>
+						<circle className={styles['svg-orange']} cx='50' cy='50' r='45'/>
 						{/*1-4*/}
 						<circle className={styles['svg-green']}
 								cx='50' cy='50'
 								r='45'
-								id='green'
 								stroke={pattern[0] ? pattern[0].color : null}
 								strokeDasharray={pattern[0] ? pattern[0].strokeArray : null}
 						/>
@@ -71,7 +69,6 @@ const Level = ({
 							<circle className={styles['svg-blue-next']}
 									cx='50' cy='50'
 									r='45'
-									id='orange'
 									stroke={pattern[0] ? pattern[0].color : null}
 									strokeDasharray={pattern[0] && pattern[0].id > 5 ? pattern[0].strokeArrayNextCircle : null}
 							/>
@@ -80,7 +77,6 @@ const Level = ({
 							<circle className={styles['svg-red-last']}
 									cx='50' cy='50'
 									r='45'
-									id='orange'
 									stroke={pattern[0] ? pattern[0].color : null}
 									strokeDasharray={pattern[0] && pattern[0].id > 5 ? pattern[0].strokeArrayLastCircle : null}
 							/>

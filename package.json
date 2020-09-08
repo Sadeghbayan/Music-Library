@@ -9,7 +9,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
-    "react-spinners-css": "^1.2.2"
+    "react-spinners-css": "^1.2.2",
+    "sinon": "^9.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -31,5 +32,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.4",
+    "enzyme-to-json": "^3.5.0"
   }
 }
